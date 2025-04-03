@@ -1,0 +1,134 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: rgb(142, 228, 252);
+}
+
+header {
+    background-color: rgb(255, 255, 255);
+    color: rgb(252, 243, 117);
+    text-align: center;
+
+}
+
+.昆布とは {
+    width: 90%;
+    max-width: 1300px;
+    margin: 20px auto;
+    background: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.昆布の特徴 {
+    width: 90%;
+    max-width: 1300px;
+    margin: 20px auto;
+    background: rgb(254, 255, 219);
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.活動時間 {
+    width: 90%;
+    max-width: 1300px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.資格 {
+    width: 90%;
+    max-width: 1300px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.スケジュール {
+    width: 90%;
+    max-width: 1300px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.栄光 {
+    width: 90%;
+    max-width: 1300px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.QA {
+    width: 90%;
+    max-width: 1300px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.免責 {
+    width: 90%;
+    max-width: 1300px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+h2 {
+    color: #ff783c;
+    border-bottom: 3px solid;
+    font-size: 30px;
+}
+
+h3 {
+    color: #ff783c;
+}
+
+p {
+    margin-top: 0;
+    margin-bottom: 0px;
+    line-height: 1.4;
+    font-size: 20px;
+}
+
+qu{
+    color: red;
+}
+
+an{
+    color: blue;
+    border-bottom: 1px solid;
+    border-color: black
+}
+
+li {
+    font-size: 20px;
+}
+
+footer{
+    size: 30px;
+    text-align: center;
+    background:  white;
+}
+
+img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+}
+
+/*
+Theme Name: computer
+Description: computer
+Version: 1.00
+Author: xxx
+*/
