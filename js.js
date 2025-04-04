@@ -28,3 +28,20 @@ document.addEventListener("DOMContentLoaded", function() {
     window.addEventListener("scroll", onScroll);
     onScroll(); // 初回チェック
 });
+
+    const fadeElements = document.querySelectorAll('.fade-in');
+
+    const onScroll = () => {
+        const triggerBottom = window.innerHeight * 0.85;
+
+        fadeElements.forEach(el => {
+            const elementTop = el.getBoundingClientRect().top;
+
+            if (elementTop < triggerBottom) {
+                el.classList.add('visible');
+            }
+        });
+    };
+
+    window.addEventListener('scroll', onScroll);
+    window.addEventListener('load', onScroll); // ページ読み込み直後にもチェック
