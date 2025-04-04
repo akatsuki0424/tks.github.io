@@ -87,34 +87,246 @@ header {
     width: 90%;
     max-width: 1300px;
     margin: 20px auto;
-    background: white;
+    background: #ffffff;
     padding: 20px;
     border-radius: 20px;
     border: 3px solid;
     border-color: #0b60c794;
+    transition: opacity 1s ease, transform 1s ease;
 }
+
+/* fade-in */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.活動時間 h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+
+    padding-bottom: 5px;
+}
+
+.活動時間 h3 {
+    font-size: 22px;
+    color: #333;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.活動時間 h4 {
+    font-size: 18px;
+    color: #777;
+    text-align: left;
+    margin: 0;
+}
+
+/* モバイル対応 */
+@media (max-width: 600px) {
+    .活動時間 {
+        padding: 20px;
+    }
+
+    .活動時間 h2 {
+        font-size: 24px;
+    }
+
+    .活動時間 h3 {
+        font-size: 20px;
+    }
+
+    .活動時間 h4 {
+        font-size: 16px;
+    }
+}
+
 
 .資格 {
     width: 90%;
     max-width: 1300px;
     margin: 20px auto;
-    background: white;
+    background: #ffffff;
     padding: 20px;
     border-radius: 20px;
+    transition: opacity 1s ease, transform 1s ease;
     border: 3px solid;
     border-color: #0b60c794;
 }
+
+.資格 span {
+    color: rgb(14, 88, 131);
+}
+
+.資格 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.資格 li {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    font-size: 18px;
+    border-bottom: 1px dashed #ccc;
+}
+
+.資格 li:last-child {
+    border-bottom: none;
+}
+
+/* 左の資格アイコン */
+.資格 li::before {
+    content: "✔"; 
+    font-size: 18px;
+    color: #0b60c7;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+/* 国家資格の青色 */
+.資格 li span {
+    color: rgb(14, 88, 131);
+    font-weight: bold;
+}
+
+/* フェードインアニメーション */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* 画像の調整 */
+.資格 img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 20px auto 0;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+    .資格 {
+        padding: 20px;
+    }
+    
+    .資格 li {
+        font-size: 16px;
+    }
+}
+
 
 .スケジュール {
     width: 90%;
     max-width: 1300px;
     margin: 20px auto;
-    background: white;
+    background: #ffffff;
     padding: 20px;
     border-radius: 20px;
+    transition: opacity 1s ease, transform 1s ease;
     border: 3px solid;
     border-color: #0b60c794;
 }
+
+.スケジュール ul {
+    list-style: none;
+    padding: 0;
+}
+
+.スケジュール li {
+    display: flex;
+    align-items: center;
+    padding: 12px 0;
+    border-bottom: 1px dashed #ccc;
+}
+
+.スケジュール li:last-child {
+    border-bottom: none;
+}
+
+/* 左の月部分 */
+.スケジュール li::before {
+    content: attr(data-month);
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    background: #0b60c7;
+    padding: 5px 10px;
+    border-radius: 5px;
+    margin-right: 12px;
+    min-width: 50px;
+    text-align: center;
+}
+
+/* 大会・イベント */
+tou {
+    background-color: #ffe4b3;
+    color: #d35400;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+    display: inline-block;
+}
+
+/* 検定・試験 */
+com {
+    background-color: #d9ecff;
+    color: #2c7edb;
+    font-weight: bold;
+    padding: 3px 6px;
+    border-radius: 4px;
+    margin-left: 4px;
+    margin-right: 4px;
+    display: inline-block;
+}
+
+/* フェードインアニメーション */
+.fade-in {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease, transform 1s ease;
+}
+
+.fade-in.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* スマホ対応 */
+@media (max-width: 600px) {
+    .スケジュール {
+        padding: 20px;
+    }
+    
+    .スケジュール li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .スケジュール li::before {
+        font-size: 16px;
+        min-width: auto;
+        margin-bottom: 5px;
+    }
+}
+
+
 
 .栄光 {
     width: 90%;
@@ -183,7 +395,7 @@ p {
 }
 
 .question {
-    font-size: 22px;
+    font-size: 20px;
     font-weight: bold;
     color: rgb(0, 0, 0);
     margin-bottom: 5px;
@@ -191,6 +403,7 @@ p {
 
 .answer {
     font-size: 20px;
+    font-weight: bold;
     color: #0b60c794;
     border-top: 1px solid #ccc;
     padding-top: 5px;
@@ -200,6 +413,7 @@ p {
 
 li {
     font-size: 20px;
+    font-weight: bold;
 }
 
 footer{
@@ -219,6 +433,7 @@ img {
     border-collapse: collapse;
     width: 100%;
     max-width: 1300px;
+    font-size: 20px;
   }
   .table_design01 th, .table_design01 td {
     border: 2px solid #fff;
@@ -226,6 +441,7 @@ img {
     text-align: center  ;
     padding: 1em;
   }
+
   .table_design01 th {
     background-color: #0b60c794;
     color: #fff;
