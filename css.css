@@ -1,169 +1,143 @@
+/* ---------------------------------------
+   全体設定
+--------------------------------------- */
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(204, 244, 255);
-    font-family: 游ゴシック,メイリオ,system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif  ;
+    background-color: #f0f8ff; /* より明るい薄青系の背景色に変更 */
+    font-family: Roboto, "游ゴシック体", "游 ゴシック", Yu Gothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+    color: #333; /* 全体的な文字色を少し濃いグレーに */
+    line-height: 1.6; /* 全体的な行間を調整 */
 }
 
-/* ヘッダー全体のデザイン */
+p {
+    margin-top: 0;
+    margin-bottom: 15px; /* 段落間の余白を調整 */
+    font-size: clamp(15px, 4.5vw, 18px); /* 少しフォントサイズを小さく調整 */
+}
+
+h2 {
+    color: #0b60c7; /* h2の色を青に変更 */
+    border-bottom: 3px solid #b3d4fc; /* ボーダーを薄い青に変更 */
+    font-size: clamp(26px, 6vw, 32px); /* h2フォントサイズを少し大きく */
+    margin-top: 0;
+    margin-bottom: 20px; /* margin-bottomを少し大きく */
+    padding-bottom: 5px; /* ボーダーと文字の間隔を追加 */
+}
+
+img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05); /* 画像に薄い影を追加 */
+}
+
+/* ---------------------------------------
+   ヘッダー
+--------------------------------------- */
 header {
     width: 100%;
-    height: 80px; /* ヘッダーの高さ */
-    background-color: #ffffff; /* 背景色 */
+    height: 70px; /* ヘッダーの高さを少し低く */
+    background-color: #ffffff;
     display: flex;
-    justify-content: space-between; /* 左右に配置 */
+    justify-content: space-between;
     align-items: center;
-    padding: 0 20px;
-    box-sizing: border-box; /* これでパディングを含めてサイズを調整 */
-    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
-    overflow: hidden; /* はみ出した部分を非表示 */
+    padding: 0 25px; /* 左右のpaddingを少し大きく */
+    box-sizing: border-box;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.08); /* 影を少し弱く */
+    overflow: hidden;
 }
 
-/* タイトル */
+/* ヘッダー タイトル */
 .header-title {
-    font-size: 28px;
+    font-size: clamp(22px, 5vw, 30px); /* タイトルを少し大きく */
     font-weight: bold;
-    color: #333;
     text-decoration: none;
-    white-space: nowrap; /* タイトルが改行されないように */
+    white-space: nowrap;
+    color: #0b60c7; /* タイトル色を青に変更 */
 }
 
-/* ナビゲーションメニュー */
+/* ヘッダー ナビゲーションメニュー */
 .nav-menu {
     display: flex;
-    gap: 30px;
-    flex-wrap: wrap; /* 画面が狭いときに自動で折り返す */
+    gap: 25px; /* ナビゲーションメニューのgapを少し大きく */
+    flex-wrap: wrap;
 }
 
 .nav-menu a {
     text-decoration: none;
-    font-size: 18px;
-    color: #333;
+    font-size: clamp(16px, 4vw, 18px);
+    color: #555; /* ナビゲーションリンクの色を少し薄く */
     transition: color 0.3s;
+    padding: 8px 12px; /* リンクにpaddingを追加してクリック領域を広げる */
+    border-radius: 5px; /* リンクに角丸を追加 */
 }
 
 .nav-menu a:hover {
-    color: #0073e6;
+    color: #ffffff; /* ホバー時に文字色を白に */
+    background-color: #0b60c7; /* ホバー時の背景色を青に */
 }
 
-/* スマホ対応（小さい画面では縦に並ぶ） */
-@media (max-width: 768px) {
+/* ヘッダー スマホ対応 */
+@media (max-width: 1080px) {
     header {
         flex-direction: column;
         height: auto;
-        padding: 10px;
+        padding: 15px; /* paddingを少し大きく */
     }
-    
+
     .nav-menu {
         flex-direction: column;
         align-items: center;
-        gap: 10px;
+        gap: 15px; /* gapを少し大きく */
     }
 }
 
-.昆布とは {
+/* ---------------------------------------
+   コンテンツセクション (共通スタイル)
+--------------------------------------- */
+.昆布とは, .昆布の特徴, .活動時間, .資格, .スケジュール, .栄光, .免責, .QA {
     width: 90%;
-    max-width: 1300px;
-    margin: 30px auto;
-    background: rgb(255, 255, 255);
-    padding: 20px;
-    border-radius: 20px;
-    border: 3px solid;
-    border-color: #0b60c794;
-}
- 
-.昆布の特徴 {
-    width: 90%;
-    max-width: 1300px;
-    margin: 20px auto;
-    background: rgba(255, 255, 255, 0.879);
-    padding: 20px;
-    border-radius: 20px;
-    border: 3px solid;
-    border-color: #0b60c794;
-}
-
-.活動時間 {
-    width: 90%;
-    max-width: 1300px;
-    margin: 20px auto;
+    max-width: 1200px; /* max-widthを少し小さく */
+    margin: 30px auto; /* margin-topを少し大きく */
+    padding: 20px 30px 30px; /* paddingを少し大きく */
     background: #ffffff;
-    padding: 20px;
-    border-radius: 20px;
-    border: 3px solid;
-    border-color: #0b60c794;
-    transition: opacity 1s ease, transform 1s ease;
+    border-radius: 20px; /* 角丸を少し大きく */
+    border: 1px solid #b3d4fc; /* ボーダーを細く、色を薄く */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.05); /* 影を少し弱く、広げる */
 }
 
-/* fade-in */
+/* フェードインアニメーション (変更なし) */
 .fade-in {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease, transform 1s ease;
+    transform: translateY(20px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
 }
 
-.fade-in.visible {
+.fade-in.visible, .show {
     opacity: 1;
     transform: translateY(0);
 }
 
-.活動時間 h2 {
-    font-size: 28px;
-    margin-bottom: 20px;
-
-    padding-bottom: 5px;
-}
-
-.活動時間 h3 {
-    font-size: 22px;
-    color: #333;
+/* セクション見出し (活動時間, 資格, スケジュール 共通) */
+.活動時間 h3, .資格 h3, .スケジュール h3 {
+    font-size: clamp(20px, 5vw, 24px); /* h3フォントサイズを少し大きく */
+    color: #0b60c7;
     text-align: left;
-    margin-bottom: 10px;
+    margin-bottom: 15px; /* margin-bottomを少し大きく */
 }
 
-.活動時間 h4 {
-    font-size: 18px;
-    color: #777;
+.活動時間 h4, .資格 h4, .スケジュール h4 {
+    font-size: clamp(16px, 4vw, 18px);
+    color: #777; /* h4の色を少し薄く */
     text-align: left;
-    margin: 0;
+    margin: 0 0 10px 0; /* margin-bottomを追加 */
 }
 
-/* モバイル対応 */
-@media (max-width: 600px) {
-    .活動時間 {
-        padding: 20px;
-    }
-
-    .活動時間 h2 {
-        font-size: 24px;
-    }
-
-    .活動時間 h3 {
-        font-size: 20px;
-    }
-
-    .活動時間 h4 {
-        font-size: 16px;
-    }
-}
-
-
-.資格 {
-    width: 90%;
-    max-width: 1300px;
-    margin: 20px auto;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 20px;
-    transition: opacity 1s ease, transform 1s ease;
-    border: 3px solid;
-    border-color: #0b60c794;
-}
-
-.資格 span {
-    color: rgb(14, 88, 131);
-}
-
+/* ---------------------------------------
+   資格セクション
+--------------------------------------- */
 .資格 ul {
     list-style: none;
     padding: 0;
@@ -172,76 +146,46 @@ header {
 .資格 li {
     display: flex;
     align-items: center;
-    padding: 12px 0;
-    font-size: 18px;
-    border-bottom: 1px dashed #ccc;
+    padding: 15px 0; /* paddingを少し大きく */
+    font-size: clamp(16px, 4vw, 18px);
+    border-bottom: 1px dashed #d0e6f9; /* ボーダー色をさらに薄く */
 }
 
 .資格 li:last-child {
     border-bottom: none;
 }
 
-/* 左の資格アイコン */
 .資格 li::before {
-    content: "✔"; 
+    content: "✔";
     font-size: 18px;
     color: #0b60c7;
     font-weight: bold;
-    margin-right: 10px;
+    margin-right: 15px; /* margin-rightを少し大きく */
 }
 
-/* 国家資格の青色 */
 .資格 li span {
-    color: rgb(14, 88, 131);
+    color: #0b60c7;
     font-weight: bold;
 }
 
-/* フェードインアニメーション */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease, transform 1s ease;
+.additional-qualifications-badge {
+    display: inline-block; /* 幅をテキストに合わせて調整 */
+    padding: 12px 25px; /* padding を調整 */
+    background-color: #0b60c7; /* メインカラーの青 */
+    color: #ffffff; /* テキストを白抜きに */
+    border-radius: 30px; /* 角丸を大きくしてバッジ風に */
+    font-size: clamp(16px, 4vw, 18px);
+    font-weight: bold;
+    margin-top: 25px;
+    text-align: center; /* テキスト中央揃え */
 }
 
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
+.additional-qualifications-badge p {
+    margin-bottom: 0;
 }
-
-/* 画像の調整 */
-.資格 img {
-    display: block;
-    max-width: 100%;
-    height: auto;
-    margin: 20px auto 0;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-}
-
-/* スマホ対応 */
-@media (max-width: 600px) {
-    .資格 {
-        padding: 20px;
-    }
-    
-    .資格 li {
-        font-size: 16px;
-    }
-}
-
-
-.スケジュール {
-    width: 90%;
-    max-width: 1300px;
-    margin: 20px auto;
-    background: #ffffff;
-    padding: 20px;
-    border-radius: 20px;
-    transition: opacity 1s ease, transform 1s ease;
-    border: 3px solid;
-    border-color: #0b60c794;
-}
-
+/* ---------------------------------------
+   スケジュールセクション
+--------------------------------------- */
 .スケジュール ul {
     list-style: none;
     padding: 0;
@@ -250,221 +194,183 @@ header {
 .スケジュール li {
     display: flex;
     align-items: center;
-    padding: 12px 0;
-    border-bottom: 1px dashed #ccc;
+    padding: 15px 0; /* paddingを少し大きく */
+    font-size: clamp(16px, 4vw, 18px);
+    border-bottom: 1px dashed #d0e6f9; /* ボーダー色をさらに薄く */
 }
 
 .スケジュール li:last-child {
     border-bottom: none;
 }
 
-/* 左の月部分 */
 .スケジュール li::before {
     content: attr(data-month);
-    font-size: 18px;
+    font-size: clamp(14px, 3vw, 16px);
     font-weight: bold;
     color: #ffffff;
     background: #0b60c7;
-    padding: 5px 10px;
-    border-radius: 5px;
-    margin-right: 12px;
-    min-width: 50px;
-    text-align: center;
+    padding: 6px 12px; /* paddingを少し調整 */
+    border-radius: 6px; /* 角丸を少し大きく */
+    margin-right: 15px; /* margin-rightを少し大きく */
+    min-width: 55px; /* min-widthを少し大きく */
+    text-align: center; 
 }
 
-/* 大会・イベント */
+/* スケジュールセクション 特殊タグ */
 tou {
-    background-color: #ffe4b3;
-    color: #d35400;
+    background-color: #d0e6f9; /* 背景色をさらに薄く */
+    color: #0b60c7;
     font-weight: bold;
-    padding: 3px 6px;
-    border-radius: 4px;
-    margin-left: 4px;
-    margin-right: 4px;
+    padding: 4px 8px; /* paddingを少し調整 */
+    border-radius: 5px; /* 角丸を少し大きく */
+    margin: 0 5px; /* marginを少し大きく */
     display: inline-block;
 }
 
-/* 検定・試験 */
 com {
-    background-color: #d9ecff;
-    color: #2c7edb;
+    background-color: #f0f8ff; /* 背景色をさらに薄く */
+    color: #0b60c7;
     font-weight: bold;
-    padding: 3px 6px;
-    border-radius: 4px;
-    margin-left: 4px;
-    margin-right: 4px;
+    padding: 4px 8px; /* paddingを少し調整 */
+    border-radius: 5px; /* 角丸を少し大きく */
+    margin: 0 5px; /* marginを少し大きく */
     display: inline-block;
 }
 
-/* フェードインアニメーション */
-.fade-in {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 1s ease, transform 1s ease;
-}
-
-.fade-in.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* スマホ対応 */
+/* スケジュールセクション スマホ対応 (変更なし) */
 @media (max-width: 600px) {
-    .スケジュール {
-        padding: 20px;
-    }
-    
     .スケジュール li {
         flex-direction: column;
         align-items: flex-start;
     }
 
     .スケジュール li::before {
-        font-size: 16px;
         min-width: auto;
         margin-bottom: 5px;
     }
 }
 
 
-
-.栄光 {
-    width: 90%;
-    max-width: 1300px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 20px;
-    border: 3px solid;
-    border-color: #0b60c794;
-}
-
-
-.免責 {
-    width: 90%;
-    max-width: 1300px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 20px;
-    border: 3px solid;
-    border-color: #0b60c794;
-}
-
-h2 {
-    color: #000000;
-    border-bottom: 3px solid;
-    font-size: 30px;
-    margin-top: 0%;
-}
-
-h3 {
-    color: #ff6625;
-    font-size: 20px;
-    text-align:left;
-}
-
-h4{
-    font-size: 20px;
-}
-
-p {
-    margin-top: 0;
-    margin-bottom: 0px;
-    line-height: 1.4;
-    font-size: 20px;
-}
-
-.QA {
-    width: 90%;
-    max-width: 1300px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 20px;
-    border: 3px solid #0b60c794;
-    border-color: #0b60c794;
-}
-
+/* ---------------------------------------
+   QAセクション
+--------------------------------------- */
 .qa-box {
-    padding: 15px;
-    margin-bottom: 10px;
-    background: #ffffff;
-    border-left: 5px solid #0b60c794;
+    padding: 20px; /* paddingを少し大きく */
+    margin-bottom: 15px; /* margin-bottomを少し大きく */
+    background: #f5faff;
+    border-left: 6px solid #0b60c7; /* ボーダーを少し太く */
     cursor: pointer;
+    border-radius: 8px; /* 角丸を追加 */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.03); /* 影を追加 */
 }
 
 .question {
-    font-size: 20px;
+    font-size: clamp(16px, 4vw, 18px);
     font-weight: bold;
-    color: rgb(0, 0, 0);
-    margin-bottom: 5px;
+    color: #0b60c7;
+    margin-bottom: 8px; /* margin-bottomを少し大きく */
 }
 
 .answer {
-    font-size: 20px;
-    font-weight: bold;
-    color: #0b60c794;
-    border-top: 1px solid #ccc;
-    padding-top: 5px;
+    font-size: clamp(16px, 4vw, 18px);
+    font-weight: normal; /* font-weightをnormalに */
+    color: #555; /* 色を少し薄く */
+    border-top: 1px solid #d0e6f9; /* ボーダー色をさらに薄く */
+    padding-top: 10px; /* padding-topを少し大きく */
+    margin-top: 8px; /* margin-topを少し大きく */
     display: none;
 }
 
-
-li {
-    font-size: 20px;
-    font-weight: bold;
-}
-
-footer{
-    size: 30px;
-    text-align: center;
-    background:  white;
-}
-
-img {
-    width: 100%;
-    max-width: 1000px;
-    height: auto;
-}
-
-
+/* ---------------------------------------
+   テーブルデザイン
+--------------------------------------- */
 .table_design01 {
     border-collapse: collapse;
     width: 100%;
-    max-width: 1300px;
-    font-size: 20px;
-  }
-  .table_design01 th, .table_design01 td {
-    border: 2px solid #fff;
-    background-color: #e6f1f6;
-    text-align: center  ;
-    padding: 1em;
-  }
+    max-width: 1200px; /* max-widthをコンテンツセクションと合わせる */
+    font-size: clamp(16px, 4vw, 18px); /* フォントサイズを少し小さく */
+    margin: 30px 0; /* margin-topをコンテンツセクションと合わせる */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1); /* 影を少し弱く、広げる */
+    border-radius: 10px; /* テーブル全体に角丸を追加 */
+    overflow: hidden; /* 角丸を適用するためにoverflow: hidden; */
+}
 
-  .table_design01 th {
-    background-color: #0b60c794;
-    color: #fff;
-    font-weight: bold;
+.table_design01 th, .table_design01 td {
+    border: none; /* ボーダーを削除 */
+    padding: 15px 12px; /* paddingを調整 */
     text-align: left;
-    width: 70%;
-    min-width: 4em;
-  }
-
-.fade-in {
-    opacity: 0;  /* 最初は透明 */
-    transform: translateY(20px);  /* 少し下にずらす */
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+    background-color: #f5faff; /* 背景色を少し薄く */
 }
 
-.show {
-    opacity: 1;  /* 表示 */
-    transform: translateY(0);  /* 元の位置に戻す */
+.table_design01 th {
+    background-color: #0b60c7;
+    color: #ffffff;
+    font-weight: bold;
+    text-align: center;
+    padding: 18px 12px; /* paddingを調整 */
+    border-bottom: 2px solid #d0e6f9; /* ヘッダー下部にボーダーを追加 */
 }
 
-/*
-Theme Name: computer
-Description: computer
-Version: 1.00
-Author: xxx
-*/
+.table_design01 td {
+    color: #555; /* 文字色を少し薄く */
+}
+
+/* 順位に応じたハイライト */
+.table_design01 td.rank-1 {
+    background-color: #ffe066; /* 金色を少し柔らかく */
+    color: #333;
+    font-weight: bold;
+}
+
+.table_design01 td.rank-2 {
+    background-color: #d3d3d3; /* 銀色を少し柔らかく */
+    color: #333;
+    font-weight: bold;
+}
+
+.table_design01 td.rank-3 {
+    background-color: #e0b873; /* 銅色を少し柔らかく */
+    color: #333;
+    font-weight: bold;
+}
+
+/* ホバーエフェクト */
+.table_design01 tr:hover td {
+    background-color: #e6f1fa; /* ホバー時の背景色を少し変更 */
+    transition: background-color 0.2s ease-in-out; /* ホバーアニメーションを少し速く、滑らかに */
+}
+
+/* モバイル対応 (変更なし) */
+@media (max-width: 600px) {
+    .table_design01 {
+        font-size: clamp(14px, 3vw, 16px);
+    }
+
+    .table_design01 th, .table_design01 td {
+        padding: 10px;
+    }
+}
+
+
+/* ---------------------------------------
+   フッター
+--------------------------------------- */
+footer {
+    font-size: clamp(14px, 3vw, 16px);
+    text-align: center;
+    background: #f0f8ff; /* フッター背景色をbodyと同じ薄青系に */
+    padding: 25px; /* paddingを少し大きく */
+    color: #777; /* 文字色を少し薄く */
+    border-top: 1px solid #b3d4fc; /* 上部にボーダーを追加 */
+}
+
+/* ---------------------------------------
+   モバイル対応 (全体)
+--------------------------------------- */
+@media (max-width: 600px) {
+    .活動時間, .資格, .スケジュール, .QA, .昆布とは, .昆布の特徴, .栄光, .免責 {
+        padding: 20px; /* paddingを少し大きく */
+        border-radius: 15px; /* 角丸を少し小さく */
+        margin: 20px auto; /* marginを少し小さく */
+    }
+}
