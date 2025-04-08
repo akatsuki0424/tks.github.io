@@ -8,18 +8,27 @@
 </head>
 <body>
 
-<header>
-    <h1><a href="index.html" class="header-title">コンピュータ部</a></h1>
-    <nav class="nav-menu">
+    <header>
+        <a href="index.html" class="header-title">コンピュータ部</a>
+    
+        <!-- ハンバーガーアイコン -->
+        <div class="hamburger" id="hamburger">  <!-- ★ クラス名: hamburger, ID: hamburger ★ -->
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    
+        <!-- メニュー -->
+        <nav class="nav-menu" id="nav-menu">     <!-- ★ クラス名: nav-menu, ID: nav-menu ★ -->
             <a href="index.html">TOP</a>
-            <!-- 必要に応じてナビゲーションリンクを追加 -->
-        </ul>
-    </nav>
-</header>
-
+            <a href="#men">免責事項</a>
+            <a href="#policy">サイトポリシー</a>
+            <a href="#kan">推奨環境</a>
+        </nav>
+      </header>
 <main>
         <section class="ポリシー fade-in">  <!-- 免責事項セクション -->
-            <h2>免責事項</h2>
+            <h2 id="men">免責事項</h2>
 
             <section>
                 <h4>1. ウェブサイトの利用について</h4>
@@ -53,7 +62,7 @@
         </section>
 
         <section class="ポリシー fade-in"> <!-- サイトポリシーセクション -->
-            <h2>サイトポリシー</h2>
+            <h2 id="policy">サイトポリシー</h2>
 
             <section>
                 <h4>1. 基本方針</h4>
@@ -92,7 +101,7 @@
         </section>
         <section class="ポリシー fade-in"> <!--環境セクション-->
             <section>
-                <h2>推奨環境</h2>
+                <h2 id="kan">推奨環境</h2>
                 <p>当サイトでは下記のインターネットブラウザでの動作を確認・推奨しています。それ以外でのインターネットブラウザでアクセスした場合、正常に動作しない場合がありますのでご了承ください。</p>
                 <ul>
                     <li>Google Chrome(Ver:134.0.6998.178)</li>
