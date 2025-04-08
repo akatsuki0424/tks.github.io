@@ -1,0 +1,41 @@
+/*----------ページ全体の設定----------*/
+#container {
+	width:1000px;
+	margin:0 auto;
+	background-color:#fffdfb; }
+
+/*----------header内の設定----------*/
+header {
+	height:220px; }
+
+/*----------contents内の設定----------*/
+#contents section {
+	padding: 10px 0px;
+	border-bottom-style: solid;
+	border-bottom-color:#a9a9a9 ;
+	border-bottom-width: thin;
+}
+
+/*----------bodyの設定----------*/
+
+/*----------float設定----------*/
+.left {
+	float:left;
+	padding:0px 10px 10px 0px;
+}
+.right{
+	float:right;
+	padding:0px 10px 10px 0px;
+	
+}
+.second {
+	clear:both;
+}
+
+section::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+
