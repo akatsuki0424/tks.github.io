@@ -1,47 +1,34 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const questions = document.querySelectorAll(".qa-box");
-
-    questions.forEach((box) => {
+    // QAセクションの開閉処理
+    const qaBoxes = document.querySelectorAll(".qa-box");
+    qaBoxes.forEach((box) => {
         box.addEventListener("click", function () {
             const answer = this.querySelector(".answer");
-            if (answer.style.display === "none" || answer.style.display === "") {
-                answer.style.display = "block";
-            } else {
-                answer.style.display = "none";
-            }
+            answer.style.display = answer.style.display === "block" ? "none" : "block"; // より簡潔な書き方
         });
     });
-});
 
-document.addEventListener("DOMContentLoaded", function() {
-    const fadeElements = document.querySelectorAll(".fade-in");
-
-    const onScroll = () => {
-        fadeElements.forEach(element => {
-            const rect = element.getBoundingClientRect();
-            if (rect.top < window.innerHeight - 100) {
-                element.classList.add("show");
-            }
-        });
-    };
-
-    window.addEventListener("scroll", onScroll);
-    onScroll(); // 初回チェック
-});
-
+    // フェードインアニメーション処理
     const fadeElements = document.querySelectorAll('.fade-in');
-
     const onScroll = () => {
         const triggerBottom = window.innerHeight * 0.85;
-
         fadeElements.forEach(el => {
             const elementTop = el.getBoundingClientRect().top;
-
             if (elementTop < triggerBottom) {
                 el.classList.add('visible');
             }
         });
     };
-
     window.addEventListener('scroll', onScroll);
     window.addEventListener('load', onScroll); // ページ読み込み直後にもチェック
+
+    // ハンバーガーメニュー処理 (★ 1箇所にまとめました ★)
+    const hamburger = document.getElementById("hamburger");
+    const navMenu = document.getElementById("nav-menu");
+    hamburger.addEventListener("click", function () {
+        hamburger.classList.toggle("active");  // ☰ ↔ ✕
+        navMenu.classList.toggle("show");      // メニュー表示切替
+    });
+});
+
+
