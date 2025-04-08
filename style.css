@@ -1,0 +1,110 @@
+@charset "utf-8";
+@import url("reset.css");
+@import url("layout.css"); 
+
+/*----------header内設定----------*/
+h1 {	
+	font-size:300%;
+	color:#23272b;
+	text-align:center;
+	font-weight:bold;
+	padding:60px 0px 0px;
+	margin:0px; }
+
+
+
+header p {
+	text-align:center;
+	color:#23272b; 
+	padding:0px 0px 0px;
+	margin:0px; }
+
+header.top {
+	background-image:url("images/header/001.jpg"); }
+header.activity {
+	background-image:url("images/header/002.jpg"); }
+header.news {
+	background-image:url("images/header/003.jpg"); }
+header.event {
+	background-image:url("images/header/004.jpg"); }
+header.gallery {
+	background-image:url("images/header/005.jpg"); }
+header { 
+	background-size:cover; 
+	}
+
+/*----------contents内設定----------*/
+#contents p:not(.left) {
+	text-indent:1em;
+}
+#contents h2,h3 {
+	border-bottom: 3px dotted #3f80b6;
+	margin-bottom: 5px;
+}
+
+/*----------nav内設定----------*/
+nav li {
+	list-style-type:none;
+ 	line-height:4em; 
+	width:200px; }
+
+nav li a {
+	text-decoration:none;
+	display:block;
+	border:solid #FBFEFF thin;
+	text-align:center; 
+	background-color:#3f80b6; }
+
+nav a:link {
+	color:#FBFEFF;
+}
+nav a:visited {
+	color:#FBFEFF;
+}	
+nav a:hover {
+	border:inset #FBFEFF thin;
+}
+
+/*----------bodyの設定----------*/
+
+small {
+	font-style: italic;
+}
+
+.foot {
+	width: 500px;
+}
+/*----------mainの設定----------*/
+.main h2 {
+	font-size: 2.5em;
+}
+.main h3 {
+	font-size:160%
+}
+.big {
+	font-size:115%;
+}
+/*----------flexboxの設定----------*/
+nav ul, .row {
+	display:flex; }
+
+/*----------listの設定----------*/
+ul {
+	list-style-position: inside;}
+
+/*----------galleryの設定----------*/
+.all {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    display: flex;
+    gap: 4px; 
+    flex-wrap: wrap; 
+    justify-content: left;
+}
+
+.all img {
+    width: 247px; 
+    height: auto; 
+}
