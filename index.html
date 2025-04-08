@@ -6,26 +6,32 @@
     <title>コンピュータ部 | 愛知県立東海樟風高等学校</title>
     <link href="css.css" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
 </head>
 
-
-    <header>
-            <a href="html.html" class="header-title">コンピュータ部</a>
-        
-        <nav class="nav-menu">
-            <a href="#about">部活について</a>
-            <a href="#schedule">活動時間</a>
-            <a href="#QA">Q＆A</a>
-            <a href="menseki.html">免責事項</a>
-        </nav>
-    </header>
-    
 <body>
+  <header>
+    <a href="html.html" class="header-title">コンピュータ部</a>
+
+    <!-- ハンバーガーアイコン -->
+    <div id="hamburger" class="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+
+    <!-- メニュー -->
+    <nav class="nav-menu" id="nav-menu">     <!-- ★ クラス名: nav-menu, ID: nav-menu ★ -->
+        <a href="#about">部活について</a>
+        <a href="#schedule">活動時間</a>
+        <a href="#QA">Q＆A</a>
+        <a href="menseki.html">免責事項</a>
+    </nav>
+  </header>
+
     <div class="昆布とは fade-in">
         <h2 id="about">コンピュータ部とは？</h2>
-        <p>　3年間で多数の資格の取得を主にさまざまな大会へ出場したり、eスポーツをしたりする部活です。
-        <p>　コンピュータ部は親密な人間関係を築き、助け合うことで成長することに重きを置いた活動をするために、ハロウィンパーティーやクリスマスパーティー、BBQなどの親睦会を定期的に開催してします。</p>
+        <p>　3年間で多数の資格の取得を主にさまざまな大会へ出場したり、eスポーツをしたりする部活です。</p>
+        <p>　コンピュータ部は親密な人間関係を築き、助け合うことで成長することに重きを置いた活動をするために、ハロウィンパーティーやクリスマスパーティー、BBQなどの親睦会を定期的に開催しています。</p>
         <p>　昨年度は東海市からの依頼で創造の杜交流館のオープニングムービーや文化祭でペッパーを使ったなどを活動行いました。</p>
     </div>
 
@@ -35,123 +41,150 @@
         <p>　顧問の<ruby>長谷川裕<rt>はせがわひろし</rt></ruby>先生はいろいろなイベントやボランティアの情報を持ってきて、「こんなのがあるんだけどやってみない？」と挑戦させてくれます。その挑戦はプロジェクトとして参加者それぞれが積極的に活動することにより、自分のスキルへと繋がったり、新たな人間関係を築くことができます。</p>
         <p>　そして、コンピュータ部はやりたいことへ挑戦し続ける積極性や自主性を育むことができます。それは高校3年間の生活だけでなく、将来にも活かすことができます。</p>
     </div>
-    
-    <div class="活動時間 fade-in">
-        <h2 id="schedule">活動時間</h2>
-        <h3>平日 16:00~17:30（長期休暇の時は09:00~12:00）</h3>
-        <h4>土日祝は休みです。</h4>
+
+    <div class="活動時間 fade-in list-design"> <!-- クラス名 `list-design` を追加 -->
+      <h2 id="schedule">活動時間</h2>
+      <ul>
+          <li>
+              <h3><i class="fas fa-calendar-week"></i> 平日</h3> <!-- 平日アイコン (Font Awesome) -->
+              <p>16:00~17:30</p>
+              <p class="supplement">（長期休暇の時は 09:00~12:00）</p>
+          </li>
+          <li>
+              <h3><i class="fas fa-sun"></i> 土日祝</h3> <!-- 土日祝アイコン (Font Awesome) -->
+              <p class="holiday">休み</p>
+          </li>
+      </ul>
     </div>
 
     <div class="資格 fade-in">
-        <h2>取得可能な資格<span style="color:#0b60c7; font-size: 20px;">　※青文字は国家資格</span></h2>
+        <h2>取得可能な資格<span style="color:#0b60c7; font-size: medium ;">　※青文字は国家資格</span></h2>
         <ul>
-            <li><span>ITパスポート試験</span></li>
-            <li><span>基本情報技術者試験</span></li>
-            <li><span>応用情報技術者試験</span></li>
+            <li><strong><span style="color: #0b60c7;">ITパスポート試験</span></strong></li>
+            <li><strong><span style="color: #0b60c7;">基本情報技術者試験</span></strong></li>
+            <li><span style="color: #0b60c7;">応用情報技術者試験</span></li>
             <li><strong>全国商業協会主催 情報処理検定 ビジネス情報部門 １級</strong></li>
             <li><strong>全国商業協会主催 情報処理検定 プログラミング部門 １級</strong></li>
             <li>全国商業協会主催 情報処理検定 ビジネス情報部門 ２級</li>
             <li>全国商業協会主催 情報処理検定 プログラミング部門 ２級</li>
         </ul>
         <div class="additional-qualifications-badge">
-          <p>このほかにも多数の資格を取得可能！</p>
-      </div>
+            <p>このほかにも多数の資格を取得可能！</p>
+        </div>
     </div>
-    
-
     <div class="スケジュール fade-in">
-        <h2>年間スケジュール</h2>
-        <ul>
-            <li data-month="4月">入学式, 始業式, 遠足, <tou>入部</tou>, <com>ITパスポート試験・基本情報技術者試験・応用情報技術者試験</com></li>
-            <li data-month="5月">中間考査</li>
-            <li data-month="6月">期末考査, <tou>全国大会予選</tou>, <com>ビジネス文書検定</com></li>
-            <li data-month="7月">終業式, <tou>全国大会</tou>,<tou>交流会</tou></li>
-            <li data-month="8月">夏休み, <tou>インターンシップ</tou></li>
-            <li data-month="9月">始業式, <tou>愛知県商業実務総合大会</tou>, <com>情報処理検定</com></li>
-            <li data-month="10月">中間考査, 東樟祭, <com>応用情報技術者試験</com></li>
-            <li data-month="11月">期末考査, 修学旅行, <tou>東海地区商業実務総合大会</tou>, <com>ビジネス計算検定</com>, <com>ビジネス文書検定</com></li>
-            <li data-month="12月">終業式, <tou>クリスマスパーティー</tou></li>
-            <li data-month="1月">始業式, <com>情報処理検定</com></li>
-            <li data-month="2月">学年末考査, <tou>お別れ会</tou>, <com>商業経済検定</com></li>
-            <li data-month="3月">卒業式, 修了式,<tou>情報処理新人大会</tou>,<tou>AI甲子園inやまがた</tou></li>
-        </ul>
-        <p>※不定期でボランティア活動あり</p>
-    </div>
-    
-    </div>
+      <h2>年間スケジュール</h2>
+      <ul>
+          <li data-month="4月">
+              <span>入学式</span>
+              <span>始業式</span>
+              <span>遠足</span>
+              <tou>入部</tou>
+              <com>ITパスポート試験・基本情報技術者試験・応用情報技術者試験</com>
+          </li>
+          <li data-month="5月">
+              <span>中間考査</span>
+          </li>
+          <li data-month="6月">
+              <span>期末考査</span>
+              <tou>全国大会予選</tou>
+              <com>ビジネス文書検定</com>
+          </li>
+          <li data-month="7月">
+              <span>終業式</span>
+              <tou>全国大会</tou>
+              <tou>交流会</tou>
+          </li>
+          <li data-month="8月">
+              <span>夏休み</span>
+              <tou>インターンシップ</tou>
+          </li>
+          <li data-month="9月">
+              <span>始業式</span>
+              <tou>愛知県商業実務総合大会</tou>
+              <com>情報処理検定</com>
+          </li>
+          <li data-month="10月">
+              <span>中間考査</span>
+              <span>東樟祭</span>
+              <com>応用情報技術者試験</com>
+          </li>
+          <li data-month="11月">
+              <span>期末考査</span>
+              <span>修学旅行</span>
+              <tou>東海地区商業実務総合大会</tou>
+              <com>ビジネス計算検定</com>
+              <com>ビジネス文書検定</com>
+          </li>
+          <li data-month="12月">
+              <span>終業式</span>
+              <tou>クリスマスパーティー</tou>
+          </li>
+          <li data-month="1月">
+              <span>始業式</span>
+              <com>情報処理検定</com>
+          </li>
+          <li data-month="2月">
+              <span>学年末考査</span>
+              <tou>お別れ会</tou>
+              <com>商業経済検定</com>
+          </li>
+          <li data-month="3月">
+              <span>卒業式</span>
+              <span>修了式</span>
+              <tou>情報処理新人大会</tou>
+              <tou>AI甲子園inやまがた</tou>
+          </li>
+      </ul>
+      <p>※不定期でボランティア活動あり</p>
+  </div>
 
     <div class="栄光 fade-in">
         <h2 id="abc">過去の大会実績</h2>
         <table class="table_design01">
             <tbody>
-              <tr>
-                <th>全国高等学校情報処理競技大会(2023年)</th>
-                <td>個人優勝　団体3位</td>
-              </tr>
-              <tr>
-                <th>全国高等学校情報処理競技大会(2024年)</th>
-                <td>個人6位</td>
-                </tr>
-              <tr>
-                <th>東海地区商業実務総合大会(2023年)</th>
-                <td>個人優勝　団体優勝</td>
-              </tr>
-              <tr>
-                <th>東海地区商業実務総合大会(2024年)</th>
-                <td>個人優勝</td>
-              </tr>
-              <tr>
-                <th>愛知県商業実務総合大会　情報処理Aの部(2023年)</th>
-                <td>個人優勝</td>
-              </tr>
-              <tr>
-                <th>愛知県商業実務総合大会　情報処理Bの部(2023年)</th>
-                <td>個人優勝</td>
-              </tr>
-              <tr>
-                <th>愛知県商業実務総合大会　情報処理Aの部(2024年)</th>
-                <td>個人6位　団体3位</td>
-              </tr>
-              <tr>
-                <th>愛知県商業実務総合大会　情報処理Bの部(2024年)</th>
-                <td>個人7位　団体4位</td>
-              </tr>
-              <tr>
-                <th>AI甲子園inやまがた(2024年)</th>
-                <td>最優秀賞<br />探求テーマ2位</td>
-              </tr>
-              <tr>
-                <th>シンギュラリティバトルクエスト(2023年)</th>
-                <td>【AQ】AIクエスト2位<br />【CQ】サイバークエスト3位<br />【企業賞】PE-BANK賞</td>
-              </tr>
+                <tr><th>全国高等学校情報処理競技大会(2023年)</th><td>個人優勝<br />団体3位</td></tr>
+                <tr><th>全国高等学校情報処理競技大会(2024年)</th><td>個人6位</td></tr>
+                <tr><th>東海地区商業実務総合大会(2023年)</th><td>個人優勝<br />団体優勝</td></tr>
+                <tr><th>東海地区商業実務総合大会(2024年)</th><td>個人優勝</td></tr>
+                <tr><th>愛知県商業実務総合大会　情報処理Aの部(2023年)</th><td>個人優勝</td></tr>
+                <tr><th>愛知県商業実務総合大会　情報処理Bの部(2023年)</th><td>個人優勝</td></tr>
+                <tr><th>愛知県商業実務総合大会　情報処理Aの部(2024年)</th><td>個人6位<br />団体3位</td></tr>
+                <tr><th>愛知県商業実務総合大会　情報処理Bの部(2024年)</th><td>個人7位<br />団体4位</td></tr>
+                <tr><th>AI甲子園inやまがた(2024年)</th><td>最優秀賞<br />探求テーマ2位</td></tr>
+                <tr><th>シンギュラリティバトルクエスト(2023年)</th><td>【AQ】AIクエスト2位<br />【CQ】サイバークエスト3位<br />【企業賞】PE-BANK賞</td></tr>
             </tbody>
-          </table>
+        </table>
     </div>
-
 
     <div class="QA fade-in">
         <h2 id="QA">Q＆A<span style="font-size:medium;">　※クリックすると表示されます</span></h2>
-    
+
         <div class="qa-box">
             <p class="question">Q. 部活内の雰囲気はどういう感じですか。</p>
             <p class="answer">A. 先輩後輩の隔たりなく、楽しい雰囲気です。また季節のイベントなども行われますので、部員同士の交流を深めることができます。</p>
         </div>
-    
+
         <div class="qa-box">
-            <p class="question">Q. ずっと試験の勉強ですか？</p>
-            <p class="answer">A. いいえ。最初以外はプログラミングや動画編集などを部活内で行うことができます。</p>
+            <p class="question">Q. ずっと勉強ですか？</p>
+            <p class="answer">A. いいえ。基礎が身についてきたら、プログラミングや動画編集などを部活内で行うことができます。</p>
         </div>
-    
+
         <div class="qa-box">
             <p class="question">Q. パソコン触ったことないし知識もないけど大丈夫ですか？</p>
             <p class="answer">A. はい。部員の多くは未経験者です。入部し情報処理の基礎を重点にどんどん応用的な問題に取り組んでいくのでご心配ありません。ちなみに、過去には未経験から全国大会に出た事例もあります！</p>
         </div>
-    
+
         <div class="qa-box">
             <p class="question">Q. 男女比はどうなっていますか？</p>
             <p class="answer">A. 男女比は6:4です。</p>
         </div>
-            
+
+        <div class="qa-box">
+            <p class="question">Q. 部活で費用はかかりますか？</p>
+            <p class="answer">A. 検定を受験する際に、受験料とテキスト代がかかります。詳しくは各検定のホームページをご確認ください。</p>
+        </div>
+
         <div class="qa-box">
             <p class="question">Q. 過去の大会ではどのような活躍をしましたか？</p>
             <p class="answer">A. 前述していますので、<a href="#abc">ここから</a>ご覧ください。</p>
@@ -161,13 +194,13 @@
             <p class="question">Q. 部活に入部するメリットはありますか？</p>
             <p class="answer">A. 情報系の授業を先取りできるだけでなく、進路においても、資格を取得することで推薦などで他の部活より有利になる可能性があります。</p>
         </div>
-    </div>    
+    </div>
+
+    <footer>
+        <p><span style="font-size:small;">&copy;Copyright 2025 愛知県立東海樟風高等学校 コンピュータ部 All rights reserved.</span></p>
+    </footer>
 
     <script src="js.js"></script>
 </body>
-
-<footer>
-    <p><span style="font-size:small;">&copy;Copyright 2025 愛知県立東海樟風高等学校 コンピュータ部 All rights reserved.</span></p>
-</footer>
 
 </html>
