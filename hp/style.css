@@ -20,15 +20,15 @@ header p {
 	margin:0px; }
 
 header.top {
-	background-image:url("h001.jpg"); }
+	background-image:url("images/header/001.jpg"); }
 header.activity {
-	background-image:url("h002.jpg"); }
+	background-image:url("images/header/002.jpg"); }
 header.news {
-	background-image:url("h003.jpg"); }
+	background-image:url("images/header/003.jpg"); }
 header.event {
-	background-image:url("h004.jpg"); }
+	background-image:url("images/header/004.jpg"); }
 header.gallery {
-	background-image:url("h005.jpg"); }
+	background-image:url("images/header/005.jpg"); }
 header { 
 	background-size:cover; 
 	}
@@ -55,12 +55,9 @@ nav li a {
 	text-align:center; 
 	background-color:#3f80b6; }
 
-nav a:link {
+nav a {
 	color:#FBFEFF;
 }
-nav a:visited {
-	color:#FBFEFF;
-}	
 nav a:hover {
 	border:inset #FBFEFF thin;
 }
@@ -95,14 +92,13 @@ ul {
 /*----------galleryの設定----------*/
 .all {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start; 
     align-items: center;
     margin: 0;
-    display: flex;
     gap: 4px; 
-    flex-wrap: wrap; 
-    justify-content: left;
+    flex-wrap: wrap;
 }
+
 
 .all img {
     width: 247px; 
