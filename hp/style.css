@@ -20,15 +20,15 @@ header p {
 	margin:0px; }
 
 header.top {
-	background-image:url("images/header/001.jpg"); }
+	background-image:url("h001.jpg"); }
 header.activity {
-	background-image:url("images/header/002.jpg"); }
+	background-image:url("h002.jpg"); }
 header.news {
-	background-image:url("images/header/003.jpg"); }
+	background-image:url("h003.jpg"); }
 header.event {
-	background-image:url("images/header/004.jpg"); }
+	background-image:url("h004.jpg"); }
 header.gallery {
-	background-image:url("images/header/005.jpg"); }
+	background-image:url("h005.jpg"); }
 header { 
 	background-size:cover; 
 	}
